@@ -1,0 +1,14 @@
+name: "CodeQL"
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+  schedule:
+    - cron: 'h h * * 0'
+  workflow_dispatch: #for testing
+
+jobs:
+  code_analysis:
+    uses: mbaluda-org/security_team/.github/workflows/code_analysis.yml@main
